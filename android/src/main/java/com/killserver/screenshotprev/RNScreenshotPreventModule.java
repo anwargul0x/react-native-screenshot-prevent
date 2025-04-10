@@ -130,8 +130,8 @@ public class RNScreenshotPreventModule extends ReactContextBaseJavaModule implem
     this.securedDialog = new Dialog(activity, android.R.style.Theme_Light);
     this.securedDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
     Objects.requireNonNull(this.securedDialog.getWindow()).setFlags(
-            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
     );
 
     RelativeLayout layout = new RelativeLayout(activity);

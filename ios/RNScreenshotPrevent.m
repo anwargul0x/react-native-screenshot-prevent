@@ -156,10 +156,8 @@ CGSize CGSizeAspectFill(const CGSize aspectRatio, const CGSize minimumSize)
         secureField.backgroundColor = [UIColor colorWithPatternImage:resultImage];
     }
 
-    [view sendSubviewToBack:secureField];
     [view addSubview:secureField];
-    [view.layer.superlayer addSublayer:secureField.layer];
-    [[secureField.layer.sublayers lastObject] addSublayer:view.layer];
+    [view sendSubviewToBack:secureField];
 }
 
 // TODO: not working now, fix crash on _UITextFieldCanvasView contenttViewInvalidated: unrecognized selector sent to instance
